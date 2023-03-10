@@ -3,21 +3,32 @@
   padding: 0;
   font-family: Roboto;
 }
+
 main {
   height: 100vh;
   display: grid;
   grid-template: min-content 1fr / min-content 1fr
 }
 
+.username {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.profile-picture{
+  height: 3rem;
+  border-radius: 100%;
+}
+
 .sidebar {
   grid-area: 1 / 1 / 3 / 2;
   background-color: #7dd3fc;
+  padding: 10px;
 }
 
 .logo-container{
   display: flex;
   align-items: center;
-  padding: 10px;
 }
 
 .logo-container img {
@@ -42,7 +53,6 @@ li {
 
 li img {
   height: 2rem;
-  margin-left: 10px;
   margin-right: 10px;
 }
 
@@ -50,6 +60,7 @@ li img {
   grid-area: 1 / 2 / 2 / 3;
   display: flex;
   flex-direction: column;
+  padding: 10px;
 }
 
 .top-header {
@@ -58,16 +69,28 @@ li img {
   align-items: center;
 }
 
+.right-side-top-header {
+  display: flex;
+  align-items: center;
+}
+
+.right-side-top-header img {
+  margin-right: 20px;
+}
+
+.notification-bell {
+  height: 3rem;
+}
+
 .searchbar {
-  flex:1;
+  flex: 1;
   display: flex;
   align-items: center;
   padding-right: 10%;
 }
 
-.searchbar img{
+.searchbar img {
   height: 2rem;
-  margin-left: 10px;
   margin-right: 10px;
 }
 
@@ -78,22 +101,30 @@ li img {
   border-style: solid;
 }
 
-.right-side-top-header {
-  display: flex;
-  align-items: center;
-  padding-right: 20px;
-}
-
 .bottom-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
+.left-side-bottom-header {
+  display: flex;
+}
+
+.left-side-bottom-header img {
+  margin-right: 20px;
+}
+
+.hi {
+  font-size: 0.8rem;
+  font-style: italic;
+  color: gray;
+}
+
 .right-side-bottom-header {
   display: flex;
   gap: 20px;
-  padding-right: 20px;
+  align-items: center;
 }
 
 .right-side-bottom-header button {
@@ -101,15 +132,16 @@ li img {
   width: 5rem;
   border: none;
   border-radius: 20px;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  height: 2rem;
   color: white;
+  font-size: 1rem;
 }
 
 .content {
   grid-area: 2 / 2 / 3 / 3;
   background-color: #E1E8ED;
   display: flex;
+  padding: 10px;
 }
 
 .left-side {
@@ -132,10 +164,23 @@ li img {
   display: block;
 }
 
-.article {
+.article, .annoucments-article, .trending-article {
   background-color: white;
   padding-bottom: 0;
   border-radius: 20px;
-  padding-left: 10px;
+  padding: 10px
 }
 
+.annoucments-article {
+  margin-bottom: 20px;
+}
+
+.trending-section{
+  border-bottom: 1px solid lightgray;
+}
+
+.username-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
